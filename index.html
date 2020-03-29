@@ -15,29 +15,15 @@
 
     <!-- Custom styles for this template -->
     <link href="bootstrap/css/album.css" rel="stylesheet">
+
+    <!-- stylesheet for this page -->
+    <link href="index.css" rel="stylesheet">
+
   </head>
+  
   <style>
-      img 
-      {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-      .navbar
-      {
-        background-color: #4fe7ff;
-      }
-      .card-img-top
-      {
-        width: 100%;
-        /*height: 15vw;*/
-        object-fit: cover;
-      }
-      li
-      {
-        color: white;
-      }
-    </style>
+      
+  </style>
 
 
 
@@ -81,7 +67,7 @@
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
+        <div class="container" id="jumbo">
           <h1 class="jumbotron-heading">Project Examples</h1>
           <p class="lead text-muted">A collection of projects I have worked on. Check them out in the links below!</p>
           <p>
@@ -104,10 +90,11 @@
                     <img class="card-img-top" src="images/subbit.png" alt="Card image cap">
 
                     <div class="card-body">
-                      <p class="card-text">Subbit creates pages of user-generated and user-ranked posts about events going on near subway stops, essentially creating a social network of off-the-radar events in NYC.</p>
+                      <p class="card-text">Subbit creates pages of user-generated and user-ranked posts about events going on near subway stops, essentially creating a social network of off-the-radar events in NYC. I was inspired after attending an underground tech meetup and wanted to create an app that would help these kind of events be discovered. I also want to find for myself and other users some pop-up events that don't appear at the top of results on sites such as Yelp or Google maps.</p>
 
-                      <p class="card-text">Subbit is built off a Ruby on Rails backend supported by PostgreSQL database. Currently working on getting React.js frontend running to allow native mobile app support in the future.
-                      </p>
+                      <p class="card-text">I took up this project since I began spending most of my time away from home and wanted something to do while traveling on the subway or waiting between appointments.</p>
+
+                      <p class="card-text">Subbit is built off a Ruby on Rails backend supported by PostgreSQL database. Currently working on getting React.js frontend running to allow native mobile app support in the future.</p>
                     </div>
 
                     <div class="card-footer">
@@ -135,6 +122,10 @@
                       <p class="card-text">Mechanical Engineering Senior Design Project: Systems integration of Columbia University's first Formula SAE Electric Vehicle. In collaboration with 3 other team members.</p>
 
                       <p class="card-text">I was primarily responsible for the design and integration of the drivetrain, design of the cooling system, and machining of all components.</p>
+
+                      <p class="card-text">I learned a great amount about designing components to strike a balance between performance (material weight vs load bearing capabilities), machinability, and reducing waste of material during machining processes. Additionally, I had to consider fitting the drivetrain of an electric vehicle into a chassis primarily designed for an internal combustion engine, all while communicating with other team members to gain an idea of my design limitations in conjunction with their contributions</p>
+
+                      <p class="card-text">A slideshow of our final project can be seen in the link below. A huge shout out to the rest of my senior design team for their immense effort, the countless late nights, great learning experience, and bringing me food to the machine shop!</p>
                       
                     </div>
 
@@ -154,13 +145,52 @@
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
+                      <h3>Self-Propelled Skateboard</h3>
+                    </div>
+                    <img class="card-img-top" src="images/board.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Started working on this project after graduation. The idea is to create a skateboard that will accelerate itself based on a user's weight distribution.</p>
+
+                      <p class="card-text">I looked into how the WiiFit board was designed and discovered the weight sensing element is found in everyday electronic scales: load cells. I began taking apart some electronic scales to grab their load cells and wired them up to create a wheatstone bridge. I connected the output to a differential gain amplifier to increase the output signal and verified the results with a multimeter. A change in pressure resulted in a demonstrable change in voltage.</p>
+
+                      <p class="card-text">My future plans with this project is to connect the output to an arduino and drive a simple DC motor as a proof of concept. Once this is done, the true challenge will come in creating a feedback control system to appropriately ramp up the velocity based on a change in pressure.</p>
+
+                      <p class="card-text">I put this project on hold currently due to apartment space limitations and focus a bit on Subbit. Planning on hopping back on this in April.</p>
+                      
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="#" class="btn btn-sm btn-outline-secondary">Photos to come soon!</a>
+                        </div>
+                        <small class="text-muted">May 2019</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+    </div>
+
+      
+    <div class="row">
+
+
+        <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
                       <h3>Machine Design Final Project</h3>
                     </div>
-                    <img class="card-img-top" src="images/valve.JPG" alt="Card image cap">
+                    <img class="card-img-top" style="height: 17vw" src="images/valve.gif" alt="Card image cap">
                     <div class="card-body">
-                      <p class="card-text">Machine Design Final Project: Design, manufacturing, and analysis of air compressor valve. Worked with 2 other team mates to design and build a valve for air compressor in mechanical engineering laboratory.</p>
+                      <p class="card-text">Machine Design Final Project: Design, manufacturing, and analysis of air compressor valve. I worked with 2 other team mates to design and build a valve to drive an air compressor in the mechanical engineering laboratory.</p>
 
                       <p class="card-text">I was primarily responsible for ensuring all component designs were machinable and machining all components.</p>
+
+                      <p class="card-text">Due to putting manufacturability first in the design process, our team produced the lowest cost valve in our class, coming in at $26 total. We were able to cut costs with a simple design, reducing material waste by matching raw material dimensions as much as possible, and retrofitting our design to the test mount available in the lab set up</p>
+
+                      <p class="card-text">Some more about out design process can be viewed in the link below!</p>
                       
                     </div>
 
@@ -176,10 +206,7 @@
                   </div>
         </div>
 
-    </div>
 
-      
-    <div class="row">
         <div class="col-md-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
@@ -188,6 +215,14 @@
                     <img class="card-img-top" src="images/Art_of_sound.jpg" alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">Revitalizing Buchla Modular Synthesizer with team of 4 multidisciplinary students. Featured in Columbia Engineering Magazine Fall 2018 edition.</p>
+
+                      <p class="card-text">This was a great opportunity to get out of my comfort zone and learn about advanced circuit design while combining engineering with my passion for music. I learned how to properly use lab equipment such as oscilliscopes to verify the behavior of different sounds modules.</p>
+
+                      <p class="card-text">Throughout the revival process, we found many potentiometers to be shorting due to dust and rusting. The biggest challenge was sourcing a ramping power supply that would ramp up to the appropriate voltage. A level power supply supplied too much voltage instantaneously, causing a large spike in current, in turn, blowing out protective fuses.</p>
+
+                      <p class="card-text">An interesting problem I found in the design involved lights in the sequencer connected in series with its corresponding circuit. So whenever a light was out, the corresponding step in the sequencer would not receive any voltage, thus rendering the step useless.</p>
+
+                      <P class="card-text">I'd like to thank Pr. David Vallancourt and the rest of the team for tackling this project!</p>
                       
                     </div>
 
@@ -197,6 +232,37 @@
                           <a href="https://magazine.engineering.columbia.edu/fall-2018/art-of-sound" class="btn btn-sm btn-outline-secondary">Check out article!</a>
                         </div>
                         <small class="text-muted">Fall 2017-Spring 2019</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+        <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Manufacturing Oven</h3>
+                    </div>
+                    <img class="card-img-top" src="images/Pascual_Oven.JPG" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">During my internship at Polymer Exploration Group (PEG), I was tasked with increasing the manufacturing capabilities of the polymer product. I created a roll-to-roll manufacuring oven that allowed PEG to increase manufacturing output by 1200%.</p>
+
+                      <p class="card-text">The materials used were common HVAC equipment such as ducting and insulation because of their relative low cost, ease of construction, and ability to hold heat.</p>
+
+                      <p class="card-text">To maintain heat within the oven, I found heating tape and thermocouples and controllers in our warehouse to transfer heat into the space of the oven and create a feedback loop through the controller which would control the amount of heat transmitted by the tape to maintain a setpoint temperature.</p>
+
+                      <p class="card-text">A challenge I ran into was evenly distributing the temperature throughout the space as heat tended to build up at the ends of the oven. To solve this, I added a relief duct with a fan to allow for air circulation while still containing heat in the space so energy would not be wasted by venting out excess heat.</p>
+
+                      <p class="car-text">I'd like to thank Dr. Wei Zhang for providing me this great learning opportunity at PEG!</p>
+
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="pdfs/PascualManufacturingOven.pdf" class="btn btn-sm btn-outline-secondary">Check out pictures!</a>
+                        </div>
+                        <small class="text-muted">Summer 2017</small>
                       </div>
                     </div>
 
