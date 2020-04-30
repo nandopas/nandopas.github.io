@@ -80,6 +80,38 @@
     <div class="container-fluid">
 
       <div class="row mb-4">
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+
+                    <div class="card-header">
+                      <h3>SpotVote</h3>
+                    </div>
+
+                    <img class="card-img-top" src="images/Spotvote.PNG" alt="Card image cap">
+
+                    <div class="card-body">
+                      <p class="card-text">A Spotify album voting client built with Ruby on Rails and custom CSS with media queries for mobile device compatibility</p>
+
+                      <p class="card-text">I implemented this by using Spotify's Web API to get data from albums based on user search queries. Then what is returned by the API request is compared to what is in SpotVote's database. If it is not in SpotVote's database, the album info is added to the database. If an album is already in the database, saving the Spotify API query does not occur and instead the album is pulled from the database.</p>
+
+                      <p class="card-text">This was done with a primary key tied to an album-name and album-artist combination to avoid saving duplicates on albums. Some optimizations for this could involve caching search query strings and mapping them to certain results to avoid so many database requests.</p>
+
+                      <p class="card-text">For the future, I'm thinking of having users sign in through their Spotify accounts so they can queue up albums they find on SpotVote to listen to later.</p>
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="" class="btn btn-sm btn-outline-secondary">Uploading soon!</a>
+                        </div>
+                        <small class="text-muted">April 2020</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
 
@@ -138,6 +170,12 @@
                   </div>
         </div>
     
+        
+      </div>
+
+      
+      <div class="row mb-4">
+
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
@@ -167,10 +205,8 @@
 
                   </div>
         </div>
-      </div>
 
-      
-      <div class="row mb-4">
+
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
@@ -227,6 +263,11 @@
 
                   </div>
         </div>
+        
+      </div>
+
+      <div class="row">
+
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
@@ -257,9 +298,7 @@
 
                   </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="col-md-4 mb-4">
                   <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
