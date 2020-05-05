@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Fernando A. Pascual</title>
+
+    <!-- stylesheet for this page -->
+    <link href="../index.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </head>
+  
+  <style>
+      
+  </style>
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About Me</h4>
+              <p class="text-muted">I am currently an engineer in New York City. I graduated from Columbia University with a BS in Mechanical Engineering in 2019. I enjoy making music <a href="https://soundcloud.com/andromedavillage" class="text-white">(Check it out!)</a>, learning about coding, and playing sports.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li>Email: f.pascual@columbia.edu</li>
+                <li>Phone: 813-766-0978</li>
+                <li><a href="https://www.linkedin.com/in/fernando-pascual-marquez-a0a96aba/" class="text-white">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="../index.html" class="navbar-brand d-flex align-items-center">
+           
+            <strong>Fernando A. Pascual</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+    	<div class="container">
+    		<div class="row">
+	    		<a href="index.html"><h1>Blog</h1></a>
+	    	</div>
+
+	    	<div class="row">
+	    		<h4>Rails User Authentication from scratch</h4>
+	    	</div>
+	    	<small>May 5th, 2020</small>
+
+	    	
+	    		<hr>
+
+	    	<p>
+	    		Along the lines of understanding fundamentals before using libraries/frameworks, here is how I am setting up user authentication in my apps
+	    	</p>
+
+	    	<p>
+	    		On my last article about understanding CSS fundamentals, I think it's important to understand how certain things work before using libraries/packages written by other people if at all possible. I know som gems exist for user authentication managament, such as devise, but if I can write it on my own a learn from some mistakes along the way, then that is great. Also, I don't really know why I need Devise right now. I'll use it when I figure out why I need it.
+	    	</p>
+
+	    	
+	    	<br>
+
+	    	<h5 style="text-align: center">
+	    		Setting up
+	    	</h5>
+	    	<hr>
+
+	    	<p>
+	    		Here is how I am setting this up. I know I will need the following:
+	    	</p>
+
+	    	<ul>
+	    		<li class="blog-li">A user model to handle database validation</li>
+	    		<li class="blog-li">User controller to handle the logic of user creation/instances</li>
+	    		<li class="blog-li">Set up my views</li>
+	   			<li class="blog-li">A session controller to keep user logged in between page requests</li>
+	   		</ul>
+
+	   		
+
+	   		<h5 style="text-align: center">
+	    		Model
+	    	</h5>
+
+	    	<hr>
+
+	    	<p>
+	    		So I need to think about what I want for my user:
+	    	</p>
+
+	    	<ul>
+	    		<li class="blog-li">email to be able to send updates</li>
+	    		<li class="blog-li">username to uniquely identify the user and present them to the world without giving up personal information</li>
+	    		<li class="blog-li">password. This should be encrypted</li>
+	   			<li class="blog-li">What kind of user? regular, admin, superadmin etc...</li>
+	   		</ul>
+
+	   		<p>
+	   			After thinking this through, I want to generate a model.
+	   		</p>
+
+	   		<p>
+	   			In the rails console, run ~rails g model User~. I don't like adding arguments to my rails commands all the time so I can add what I need to the files generated by Rails. The main files to focus on are:
+	   		</p>
+
+	   		<ul>
+	    		<li class="blog-li">db/migrate/(timestamp)_create_users.rb</li>
+	    		<li class="blog-li">app/models/user.rb</li>
+	   		</ul>
+
+	   		<p>
+	   			For the migration files, I want to add the stuff I listed above in terms of what my user needs.
+	   		</p>
+
+
+	   		<div class="row justify-content-center">
+	    		<div class="col-12 col-md-8 mb-4">
+	    			<img src="../images/usermigration.PNG" alt="usermigration file">
+	    		</div>
+	    	</div>
+
+	    	<p>
+	    		I add email, username, and password_digest as strings. In my case, I only want one kind of admin, so the admin column will be a boolean value. A user that is true for admin will have admin rights and access to certain pages/actions such as moderating content and deleting users if need be. I could add multiple admin types as different columns depending on the levels of access I want to give to a user. In the migration file I have, admin will be defaulted to false. We don't want to give new users admin rights.
+	    	</p>
+
+	    	<p>
+	    		The password_digest will handle encrypting the password so the password will not be stored as plain text. For this, we need to make sure the 'bcrypt' gem is added to the Gemfile by uncommenting the line that comes with new Rails apps. Make sure to run ~bundle install~ on the console to make sure this is added. 
+	    	</p>
+
+	    	<p> 
+	    		Finally, indexes are added to email and username individually to make sure each email and username is unique. Also this will speed up look up time since we will presumably need to use these columns often for logging in/displaying records of associated models attached to the user. We need a few more validations which will happen in the model file to make sure everything is good.
+	    	</p>
+
+	    	<div class="row justify-content-center">
+	    		<div class="col-12 col-md-8 mb-4">
+	    			<img src="../images/usermodel.PNG" alt="usermodel file">
+	    		</div>
+	    	</div>
+
+	    	<p>
+	    		user.rb will handle some validations on our model before we save to the database. We add 'has_secure_password'. This is part of the bcrypt gem and will work in conjunction with password_digest in the migration file and will allow a password confirmation input when creating new users to make sure they type in the right password.
+	    	</p>
+
+	    	<p>
+	    		The EMAIL_REGEX line includes a regular expression which will help check for valid emails upon sign up. I honestly looked this one up and its worked out well so far.
+	    	</p>
+
+	    	<p>
+	    		Finally we add to validations for both username and email. Each email must be unique, it must be included in the Post request to be saved. The same goes for username. Now email needs to to follow the Regez format. Usernames are kept case insensitive so we dont have a user name Alex and another named aLEX for example. You can also change the length of the username. Right now it must be between 3 and 20 characters.
+	    	</p>
+
+	    	<p>
+	    		With these now set up, we can run the migration to set the database schema for Users. Run ~rails db:migrate~. I suggest manually inputting a user with the rails console to add them as an admin user.
+	    	</p>
+
+	    	<br>
+
+
+	    	<h5 style="text-align: center">
+	    		Controller/View
+	    	</h5>
+
+	    	<hr>
+
+	    	<p>
+	    		So I like doing my controller and view simultaneusly because I think they go hand in hand with each other. Let's get started.
+	    	</p>
+	    	<p>
+	    		Here are some controller actions we want, their HTTP method, and what they will do/some validations to keep in mind.
+	    	</p>
+
+	    	<ul>
+	    		<li class="blog-li">Index (get): Displays all users. Hide user email from non admin users.</li>
+	    		<li class="blog-li">Show (get): Show a user's profile.</li>
+	    		<li class="blog-li">New (get): display sign up page, create a new user instance</li>
+	    		<li class="blog-li">Create (post): saves user to database. Goes in hand with new</li>
+	   			<li class="blog-li">Edit (get): let users modify their own profile. Don't let users modify other users profiles</li>
+	   			<li class="blog-li">Update (post/patch): saves user to database. Goes in hand with edit</li>
+	   			<li class="blog-li">Destroy (delete): Allow user to delete their profile. Give admin access to destroy spam accounts</li>
+	   		</ul>
+
+	   		<p>
+	   			So since we pretty much will use every action available to use as defined by the REST principle, we should add a resource to our config/routes.rb so RESTful routes will be available to us. Add ~resources :users~ to the config file. Below are the routes generated.
+	   		</p>
+
+	   		<div class="row justify-content-center">
+	    		<div class="col-12 col-md-8 mb-4">
+	    			<img src="../images/routes.PNG" alt="user routes">
+	    		</div>
+	    	</div>
+
+	    	<p>
+	    		Generate the controller with ~rails g controller users~ and add the arguments for the actions if you wish. Now lets work on the new user action/view so we can add some users.
+	    	</p>
+
+	    	<p>
+	    		So I am going to take a break from this now, but I'll get back to it to finish up!
+	    	</p>
+
+
+
+    		
+    	</div>
+
+
+    </main>

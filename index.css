@@ -24,6 +24,10 @@
         color: white;
       }
 
+      .blog-li {
+        color: black;
+      }
+
       .jumbotron
       {
         background-image: url("images/Cover.JPG");
