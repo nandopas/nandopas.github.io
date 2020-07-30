@@ -1,0 +1,362 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Fernando A. Pascual</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/album.css" rel="stylesheet">
+
+    <!-- stylesheet for this page -->
+    <link href="oldindex.css" rel="stylesheet">
+
+  </head>
+  
+  <style>
+      
+  </style>
+
+
+
+
+
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About Me</h4>
+              <p class="text-muted">I am currently an engineer in New York City. I graduated from Columbia University with a BS in Mechanical Engineering in 2019. I enjoy making music <a href="https://soundcloud.com/andromedavillage" class="text-white">(Check it out!)</a>, learning about coding, and playing sports.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li>Email: f.pascual@columbia.edu</li>
+                <li>Phone: 813-766-0978</li>
+                <li><a href="https://www.linkedin.com/in/fernando-pascual-marquez-a0a96aba/" class="text-white">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+           
+            <strong>Fernando A. Pascual</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container" id="jumbo">
+          <h1 class="jumbotron-heading">Project Examples</h1>
+          <p class="lead text-muted">A collection of projects I have worked on. Check them out in the links below!</p>
+          <p>
+            <a href="FernandoPascualResume.pdf" class="btn btn-primary my-2" rel="noopener noreferrer" target="_blank">Resume</a>
+            <a href="https://github.com/nandopas/" class="btn btn-secondary my-2" rel="noopener noreferrer" target="_blank">GitHub (nandopas)</a>
+            <a href="./blog/index.html" class="btn btn-success my-2">Blog</a>
+          </p>
+        </div>
+      </section>
+<div class="album py-5 bg-light">
+    <div class="container-fluid">
+
+      <div class="row mb-4">
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+
+                    <div class="card-header">
+                      <h3>SpotVote</h3>
+                    </div>
+
+                    <img class="card-img-top" src="images/Spotvote.PNG" alt="SpotVote">
+
+                    <div class="card-body">
+                      <strong><p class="card-text">Stack: Ruby on Rails, PostgreSQL, Spotify Web API for album data</p></strong>
+                      <p class="card-text">A Spotify album voting client built with Ruby on Rails and custom CSS with media queries for mobile device compatibility</p>
+
+                      <p class="card-text">I implemented this by using Spotify's Web API to get data from albums based on user search queries. Then what is returned by the API request is compared to what is in SpotVote's database. If it is not in SpotVote's database, the album info is added to the database. If an album is already in the database, saving the Spotify API query does not occur and instead the album is pulled from the database.</p>
+
+                      <p class="card-text">This was done with a primary key tied to an album-name and album-artist combination to avoid saving duplicates on albums. Some optimizations for this could involve caching search query strings and mapping them to certain results to avoid so many database requests.</p>
+
+                      <p class="card-text">For the future, I'm thinking of having users sign in through their Spotify accounts so they can queue up albums they find on SpotVote to listen to later. Also provide some social media features to allow commenting on albums so people can drop their opinions!</p>
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://spotvote.herokuapp.com/" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Try a demo!</a>
+                        </div>
+                        <small class="text-muted">April 2020</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+
+                    <div class="card-header">
+                      <h3>Pokemon Battler</h3>
+                    </div>
+
+                    <img class="card-img-top" src="images/pokemon.PNG" alt="Pokemon">
+
+                    <div class="card-body">
+                      <strong><p class="card-text">Stack: React, GraphQL, Apollo Client</p></strong>
+                      <p class="card-text">Used React and GraphQL queries to query to an external database to select pokemon to battle with each other. Webapp is hosted on AWS Amplify Console.</p>
+
+                      <p class="card-text">The pokemon template and GraphQL source can be found from <a href="https://www.youtube.com/watch?v=yKFoAF7J0mc&t=2s">this</a> tutorial video. I wanted to expand on the tutorial by adding a game where the user can battle two pokemon. React hooks were used to keep track of state within functional components.</p>
+
+                      <p class="card-text">Right now working on expanding the functionality to allow the user to choose which pokemon to battle from the home screen and let them choose which moves to use rather than a random move from the moveset.</p>
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://master.d35xtew67nz6kw.amplifyapp.com/battle/" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Try it out!</a>
+                        </div>
+                        <small class="text-muted">April 2020</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+
+                    <div class="card-header">
+                      <h3>Subbit</h3>
+                    </div>
+
+                    <img class="card-img-top" src="images/SubbitNew.PNG" alt="Subbit">
+
+                    <div class="card-body">
+                      <strong><p class="card-text">Stack: Ruby on Rails (API), PostgreSQL, React.js</p></strong>
+
+                      <p class="card-text">Subbit creates pages of user-generated and user-ranked posts about events going on near subway stops, essentially creating a social network of off-the-radar events in NYC. I was inspired after attending an underground tech meetup and wanted to create an app that would help these kind of events be discovered. I also want to find for myself and other users some pop-up events that don't appear at the top of results on sites such as Yelp or Google maps.</p>
+
+                      <p class="card-text">I took up this project since I began spending most of my time away from home and wanted something to do while traveling on the subway or waiting between appointments.</p>
+
+                      <p class="card-text">Subbit is built off a Ruby on Rails backend API supported by PostgreSQL database with React running the frontend to allow rapid updates on posting and reduce full page renders.</p>
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://subbit.net" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Visit subbit.net!</a>
+                        </div>
+                        <small class="text-muted">October 2019-Present</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+    
+        
+      </div>
+
+      
+      <div class="row mb-4">
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Columbia FSAE Electric Vehicle</h3>
+                    </div>
+
+                    <img class="card-img-top" src="images/fullassembly.JPG" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Mechanical Engineering Senior Design Project: Systems integration of Columbia University's first Formula SAE Electric Vehicle. In collaboration with 3 other team members.</p>
+
+                      <p class="card-text">I was primarily responsible for the design and integration of the drivetrain, design of the cooling system, and machining of all components.</p>
+
+                      <p class="card-text">I learned a great amount about designing components to strike a balance between performance (material weight vs load bearing capabilities), machinability, and reducing waste of material during machining processes. Additionally, I had to consider fitting the drivetrain of an electric vehicle into a chassis primarily designed for an internal combustion engine, all while communicating with other team members to gain an idea of my design limitations in conjunction with their contributions</p>
+
+                      <p class="card-text">A slideshow of our final project can be seen in the link below. A huge shout out to the rest of my senior design team for their immense effort, the countless late nights, great learning experience, and bringing me food to the machine shop!</p>
+                      
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="pdfs/exposlides.pdf" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Check out Presentation!</a>
+                        </div>
+                        <small class="text-muted">Fall 2018-Spring 2019</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Self-Propelled Skateboard</h3>
+                    </div>
+                    <img class="card-img-top" src="images/board.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Started working on this project after graduation. The idea is to create a skateboard that will accelerate itself based on a user's weight distribution.</p>
+
+                      <p class="card-text">I looked into how the WiiFit board was designed and discovered the weight sensing element is found in everyday electronic scales: load cells. I began taking apart some electronic scales to grab their load cells and wired them up to create a wheatstone bridge. I connected the output to a differential gain amplifier to increase the output signal and verified the results with a multimeter. A change in pressure resulted in a demonstrable change in voltage.</p>
+
+                      <p class="card-text">My future plans with this project is to connect the output to an arduino and drive a simple DC motor as a proof of concept. Once this is done, the true challenge will come in creating a feedback control system to appropriately ramp up the velocity based on a change in pressure.</p>
+
+                      <p class="card-text">I put this project on hold currently due to apartment space limitations and focus a bit on Subbit. Planning on hopping back on this in April.</p>
+                      
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="#" class="btn btn-sm btn-outline-secondary">Photos to come soon!</a>
+                        </div>
+                        <small class="text-muted">May 2019</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Machine Design Final Project</h3>
+                    </div>
+                    <img class="card-img-top" style="height: 20rem" src="images/valve.gif" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Machine Design Final Project: Design, manufacturing, and analysis of air compressor valve. I worked with 2 other team mates to design and build a valve to drive an air compressor in the mechanical engineering laboratory.</p>
+
+                      <p class="card-text">I was primarily responsible for ensuring all component designs were machinable and machining all components.</p>
+
+                      <p class="card-text">Due to putting manufacturability first in the design process, our team produced the lowest cost valve in our class, coming in at $26 total. We were able to cut costs with a simple design, reducing material waste by matching raw material dimensions as much as possible, and retrofitting our design to the test mount available in the lab set up</p>
+
+                      <p class="card-text">Some more about our design process can be viewed in the link below!</p>
+                      
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="pdfs/machinedesign.pdf" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Check out presentation!</a>
+                        </div>
+                        <small class="text-muted">Fall 2018</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+        
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Buchla 100 Revival</h3>
+                    </div>
+                    <img class="card-img-top" src="images/Art_of_sound.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Revitalizing Buchla Modular Synthesizer with team of 4 multidisciplinary students. Featured in Columbia Engineering Magazine Fall 2018 edition.</p>
+
+                      <p class="card-text">This was a great opportunity to get out of my comfort zone and learn about advanced circuit design while combining engineering with my passion for music. I learned how to properly use lab equipment such as oscilliscopes to verify the behavior of different sounds modules.</p>
+
+                      <p class="card-text">Throughout the revival process, we found many potentiometers to be shorting due to dust and rusting. The biggest challenge was sourcing a ramping power supply that would ramp up to the appropriate voltage. A level power supply supplied too much voltage instantaneously, causing a large spike in current, in turn, blowing out protective fuses.</p>
+
+                      <p class="card-text">An interesting problem I found in the design involved lights in the sequencer connected in series with its corresponding circuit. So whenever a light was out, the corresponding step in the sequencer would not receive any voltage, thus rendering the step useless.</p>
+
+                      <P class="card-text">I'd like to thank Pr. David Vallancourt for providing the opportunity and the rest of the team for tackling this project!</p>
+                      
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://magazine.engineering.columbia.edu/fall-2018/art-of-sound" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Check out article!</a>
+                        </div>
+                        <small class="text-muted">Fall 2017-Spring 2019</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+                  <div class="card mb-4 shadow-sm h-100">
+                    <div class="card-header">
+                      <h3>Manufacturing Oven</h3>
+                    </div>
+                    <img class="card-img-top" src="images/Pascual_Oven.JPG" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">During my internship at Polymer Exploration Group (PEG), I was tasked with increasing the manufacturing capabilities of the polymer product. I created a roll-to-roll manufacuring oven that allowed PEG to increase manufacturing output by 1200%.</p>
+
+                      <p class="card-text">The materials used were common HVAC equipment such as ducting and insulation because of their relative low cost, ease of construction, and ability to hold heat.</p>
+
+                      <p class="card-text">To maintain heat within the oven, I found heating tape and thermocouples and controllers in our warehouse to transfer heat into the space of the oven and create a feedback loop through the controller which would control the amount of heat transmitted by the tape to maintain a setpoint temperature.</p>
+
+                      <p class="card-text">A challenge I ran into was evenly distributing the temperature throughout the space as heat tended to build up at the ends of the oven. To solve this, I added a relief duct with a fan to allow for air circulation while still containing heat in the space so energy would not be wasted by venting out excess heat.</p>
+
+                      <p class="car-text">I'd like to thank Dr. Wei Zhang for providing me this great learning opportunity at PEG!</p>
+
+                    </div>
+
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="pdfs/PascualManufacturingOven.pdf" class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">Check out pictures!</a>
+                        </div>
+                        <small class="text-muted">Summer 2017</small>
+                      </div>
+                    </div>
+
+                  </div>
+        </div>
+
+    </div>
+</div>
+    
+    
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Fernando A. Pascual</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
