@@ -69,10 +69,12 @@
                 <ul>
                     <p>Technologies</p>
                     <li>Ruby on Rails</li>
-                    <li>React</li>
+                    <li>Node.js/Express</li>
+                    <li>React/React Native</li>
                     <li>REST APIs</li>
-                    <li>Relational Databases</li>
+                    <li>Relational Databases (Postgre, MySQL)</li>
                     <li>Object Oriented Programming</li>
+                    <li>Websockets</li>
                 </ul>
             </div>
             
@@ -95,10 +97,9 @@
                 <br>
                 <ul>
                     <li>Electronics Prototyping</li>
-                    <li>Design for manufacturability</li>
+                    <li>Design for Manufacturability</li>
                     <li>Design for Comfort</li>
                     <li>Building Commissioning</li>
-                    <li>Relational Databases</li>
                 </ul>
             </div>
             
@@ -111,6 +112,62 @@
         </div>
 
         <div class="card-container">
+
+            <div class="card">
+
+                <img src="images/riptide.PNG" alt="RipTide">
+                
+                <div class="card-info">
+                    <h4>RipTide</h4>
+                    <p> - Find Cheap Drinks Mobile App</p>
+                </div>
+                <div class="card-hover-text">
+                    <p>
+                        - Location based app that displays cheapest drinks at bars near user from an internal database.
+                    </p>
+
+                    <p>
+                        - Users can create custom routes with multiple bars.
+                        Join table used on database to independently manage user routes and which bars belong to which user routes.
+                    </p>
+                        
+                    <p>
+                        - In App navigation provided through Google Maps API.
+                    </p>
+
+                    <p>
+                        - Database relations to handle which drinks belong to which bars.
+                    </p>
+                    
+                    <p>
+                        - Uses geolocation on server side to calculate latitude/longitude of bars based on address.
+                    </p>
+                    
+                    <p>
+                        - Used asynchronous functions on client side to seamlessly render content for components from API or device local storage cache.
+                    </p>
+
+                    <p>
+                        - Implemented websockets (Rails ActionCable) to provide real time user group chats in app
+                        and remove unnecessary HTTP overhead on server needed for receiving messages.
+                    </p>
+
+                    <p>
+                        - Custom CSS/styling.
+                    </p>
+
+                    <p>
+                        - Using Ruby on Rails for server, React Native for iOS/Android app, React for admin dashboard, 
+                        static HTML/CSS/Javascript for informational site.
+                    </p>
+
+                    <div class="card-links">
+                        <a href="https://letsripit.com/" rel="noopener noreferrer" target="_blank">Visit Website</a>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="card">
 
                 <img src="images/Spotvote.PNG" alt="SpotVote">
@@ -132,10 +189,10 @@
                         - What is returned by the API request is compared to what is in SpotVote's database. 
                     </p>
                     <p>
-                        -- If it is not in SpotVote's database, the album info is added to the database. 
+                        - If it is not in SpotVote's database, the album info is added to the database. 
                     </p>
                     <p>
-                        -- If an album is already in the database, saving the Spotify API query does not occur and instead the album is pulled from the database.
+                        - If an album is already in the database, saving the Spotify API query does not occur and instead the album is pulled from the database.
 
                     </p>
                     <p>
