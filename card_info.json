@@ -1,0 +1,40 @@
+cards = [
+    {
+        "title": "Electric Car",
+        "subtitle": "Building the first Electric Vehicle for Columbia University's Motorsports team",
+        "info": [
+            "Responsible for the design and integration of the drivetrain, 
+            design of the cooling system, and machining of all components.",
+            "I learned a great amount about designing components to strike a balance between performance 
+            (material weight vs load bearing capabilities), machinability, and reducing waste of material 
+            during machining processes.",
+            "Additionally, I had to consider fitting the drivetrain of an electric 
+            vehicle into a chassis primarily designed for an internal combustion engine, all while communicating 
+            with other team members to gain an idea of my design limitations in conjunction with their contributions",
+            "A huge shout out to the rest of my senior design team for their immense effort, the countless late nights, great learning experience, and bringing me food to the machine shop!"
+        ],
+        "links": [
+            {
+                "url": "pdfs/exposlides.pdf",
+                "text": "Check out Presentation!"
+            }
+        ],
+        "tags": ["mechanical, electrical, design"]
+    }
+];
+
+/*
+Template:
+    {
+        "title": ,
+        "subtitle": ,
+        "info": [],
+        "links": [
+            {
+                "url": ,
+                "text":
+            }
+        ],
+        "tags": []
+    }
+*/

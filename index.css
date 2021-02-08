@@ -100,8 +100,6 @@ nav {
     background-size: cover;
     height: 100%;
     border-radius: 0px;
-    
-    
 }
 
 .flex-container {
@@ -109,13 +107,37 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+}
+
+.filter-button-container {
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container h1 {
     align-self: flex-start;
     border-bottom: solid;
     margin-bottom: 20px;
+}
+
+button {
+    text-decoration: none;
+    display: block;
+    border: solid;
+    border-radius: 25px;
+    padding: 10px;
+    transition: .3s;
+    background-color: rgba(28,6,88,1);
+    width: 10vw;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(253,187,45,0.5), 0 6px 20px 0 rgba(253,187,45,0.19);
+    background-color: rgba(253,187,45,1);
+    color: #FDF9EC;
 }
 
 .section-header {
@@ -257,6 +279,19 @@ footer p {
 
     .card {
         max-width: 80%;
+    }
+
+    .filter-button-container {
+        flex-direction: column;
+    }
+
+    button {
+        
+        padding: 10px;
+        margin-bottom: 10px;
+       
+        width: 60%;
+        
     }
 }
 
