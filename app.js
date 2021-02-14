@@ -352,7 +352,6 @@ const cardFilter = (filter) => {
         })
     }
 
-    // TODO: add a method to delete and append cards to DOM
     mountCards();
 }
 
