@@ -206,6 +206,12 @@ button:hover {
     padding: 20px 0;
     display: none;
     z-index: 10;
+    
+}
+
+.card-hover-text p {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    
 }
 
 
