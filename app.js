@@ -28,8 +28,9 @@ let cardInfo = [
     {
         "title": "Load Cell Electric Skateboard",
         "subtitle": "Electrical prototype for a skateboard driven by changes in user weight distribution",
-        "image": "images/board/skate_cover.jpg",
+        "image": "images/skatevid.gif",
         "imageAlt": "Prototype image",
+       
         "info": [
             "The idea is to create a skateboard that will accelerate itself based on a user's weight distribution.",
             "I looked into how the WiiFit board was designed and discovered the weight sensing element is found in everyday electronic scales: load cells.",
